@@ -1,6 +1,6 @@
 const db = require('./model/auth_login');
-const data = require('./data.json');
 
+const data = require('./data.json');
 for(let item of data.table) {
     console.log(item['Date_Column']);
     const Date_Column =item['Date_Column'];
