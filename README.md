@@ -11,4 +11,4 @@
        node data_create.js  
        
 ### 4: To Insert Data file (data.json) to local mySql server
-       node db_insert.js
+       node db_insert.js 
