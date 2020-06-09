@@ -15,13 +15,14 @@ const Task_ID = "1-10000";
  const data = { table: []};
   for (let i= 1; i<=DataSize; i++) {
     data.table.push ({
-        TASK_ID : i,
         Date_Column : `10/${randomNum.getRandomIntInclusive(1,30)}/05`,
         Rater_Column : Rater_Column[Math.floor(Math.random() * Rater_Column.length)],
         Correct_Answers_3_Label : Correct_Answers_3_Label[Math.floor(Math.random() * Correct_Answers_3_Label.length)],
         Correct_Answer_5_Label : Correct_Answer_5_Label[Math.floor(Math.random() * Correct_Answer_5_Label.length)],
         Rater_Answer_3_Label : Rater_Answer_3_Label[Math.floor(Math.random() * Rater_Answer_3_Label.length)],
-        Rater_Answer_5_Label : Rater_Answer_5_Label[Math.floor(Math.random() * Rater_Answer_5_Label.length)],});
+        Rater_Answer_5_Label : Rater_Answer_5_Label[Math.floor(Math.random() * Rater_Answer_5_Label.length)],
+        TASK_ID : i
+        });
 };
 
 /** Step2 Add extra two columns for agreement **/
@@ -30,6 +31,13 @@ const Task_ID = "1-10000";
       task.Label_Agreement_5 = (task.Correct_Answer_5_Label === task.Rater_Answer_5_Label);
   }
 
-console.log(data);
+
 fs.writeFileSync('data.json', JSON.stringify(data))
+
+
+
+
+
+
+
 
