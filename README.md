@@ -12,3 +12,7 @@
        
 ### 4: To Insert Data file (data.json) to local mySql server
        node db_insert.js 
+
+### Note: If need insert data, change Password to your own setup in auth_login.js under model folder 
+
+### PS: Install [MySQL LOCAL SERVER](https://www.mysql.com/)  
